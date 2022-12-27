@@ -1,0 +1,85 @@
+body {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 24px;
+  /* background: yellowgreen; */
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-gap: 20px;
+
+  grid-template-areas:
+    "header header header header header"
+    "aside  ....   main   main   nav"
+    "aside  ....   main   main   nav"
+    "aside  ....   main   main   nav"
+    "aside  ....   main   main   nav"
+    "footer footer footer footer footer";
+}
+
+.container {
+  grid-template-columns: 240px 1fr;
+  grid-template-areas:
+    "header header"
+    "aside nav"
+    "aside main"
+    "aside main"
+    "aside main"
+    "footer footer";
+}
+}
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    grid-template-areas:
+      "header header header header header"
+      "aside  ....   main   main   nav"
+      "aside  ....   main   main   nav"
+      "aside  ....   main   main   nav"
+      "aside  ....   main   main   nav"
+      "footer footer footer footer footer";
+  }
+}
+
+header {
+  background-color: violet;
+  grid-area: header;
+}
+
+nav {
+  background-color: magenta;
+  grid-area: nav;
+  order: 3;
+}
+
+aside {
+  background-color: khaki;
+  grid-area: aside;
+}
+
+main {
+  background-color: rgb(66, 66, 49);
+  grid-area: main;
+}
+
+footer {
+  background-color: indigo;
+  grid-area: footer;
+}
+
+
+
+
+
+
